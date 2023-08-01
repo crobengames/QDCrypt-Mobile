@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QDCrypt.Views.MainPage"
+             xmlns:local="clr-namespace:QDCrypt.CustomRenderers"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#4682B4">
+
+    <Grid
+        RowDefinitions="50, *, 80"
+        ColumnDefinitions="*" 
+        Margin="5, 5"
+        RowSpacing="5">
+
+        <!--#region Password Section-->
+        <Border
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="GhostWhite"
+            Padding="5, 0, 5, 0"
+            ZIndex="0">
+
+            <Grid
+                RowDefinitions="*"
+                ColumnDefinitions="*, Auto">
+
+                <local:BorderlessEntry
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="PasswordEntry"
+                    MaxLength="250"
+                    IsPassword="True"
+                    FontSize="Medium"     
+                    Placeholder="Password"
+                    VerticalOptions="Center"
+                    PlaceholderColor="Gray"
+                    BackgroundColor="GhostWhite"
+                    TextChanged="PasswordTextChanged"
+                    ZIndex="1" />
+
+                <ImageButton
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="ShowHideBtn"
+                    Source="hide.png"          
+                    Clicked="TogglePasswordClicked"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    ToolTipProperties.Text="Show/Hide"
+                    MaximumHeightRequest="50"
+                    MaximumWidthRequest="50"
+                    ZIndex="3"/>
+
+            </Grid>
+
+        </Border>
+        <!--#endregion /Password Section-->
+
+        <!--#region Cipher Section-->
+        <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="GhostWhite"
+            Padding="5, 0, 5, 0">
+
+            <local:BorderlessEditor
+                x:Name="CipherEditor"
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="Medium"
+                Focused="CipherEditorFocused"
+                Unfocused="CipherEditorUnfocused"
+                Placeholder="Input your text or cipher."
+                PlaceholderColor="Gray"
+                ZIndex="5" />
+
+        </Border>
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.Column="0"
+            x:Name="CopyControl"
+            VerticalOptions="End"
+            HorizontalOptions="End"
+            Margin="10, 10"
+            Opacity="0.35">
+
+            <ImageButton
+                x:Name="CopyBtn"
+                Clicked="CopyClicked"
+                Pressed="OnCopyPressed"
+                Released="OnCopyReleased"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Source="copy.png"
+                MaximumHeightRequest="40"
+                MaximumWidthRequest="40"
+                ZIndex="11" />
+
+            <Label 
+                Text="Copy"
+                TextColor="Black"
+                FontSize="Medium"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" 
+                ZIndex="12" />
+
+        </VerticalStackLayout>
+        <!--#endregion /Cipher Section-->
+
+        <!--#region Buttons Section-->        
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0"
+            RowDefinitions="*" 
+            ColumnDefinitions="*,*,*">
+
+            <!--Column 0-->
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="0"
+                x:Name="EncryptBtn"
+                Source="encrypt.png"          
+                Pressed="OnEncryptPressed"
+                Released="OnEncryptReleased"
+                Clicked="OnEncryptClicked"
+                HorizontalOptions="Center"
+                MaximumWidthRequest="80"
+                MaximumHeightRequest="80"/>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Encrypt"
+                TextColor="White"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"                    
+                HeightRequest= "78"
+                WidthRequest="80"/>
+
+            <!--Column 1-->
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="1"
+                x:Name="DecryptBtn"
+                Source="decrypt.png"
+                Pressed="OnDecryptPressed"
+                Released="OnDecryptReleased"
+                Clicked="OnDecryptClicked"
+                HorizontalOptions="Center"
+                MaximumWidthRequest="80" 
+                MaximumHeightRequest="80"/>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Decrypt"
+                TextColor="White"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"                    
+                HeightRequest= "78"
+                WidthRequest="80"/>
+
+            <!--Column 2-->
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="2"
+                x:Name="ClearBtn"
+                Source="clear.png"          
+                Pressed="OnClearPressed"
+                Released="OnClearReleased"
+                Clicked="OnClearClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                MaximumWidthRequest="80"
+                MaximumHeightRequest="80"/>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="Clear"
+                TextColor="White"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"                    
+                HeightRequest= "78"
+                WidthRequest="80"/>
+
+        </Grid>
+        <!--#endregion /Button Section-->
+        
+    </Grid>
+
+</ContentPage>

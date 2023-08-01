@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QDCrypt.Views.EULAPage"
+             Shell.NavBarIsVisible="False">
+    
+    <VerticalStackLayout
+        Margin="10, 25, 10, 10"
+        Spacing="5">
+        
+        <!--#region License Section-->
+        
+        <Label
+            Text="License"
+            FontSize="Large"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+
+        <Label
+            Text="QDCrypt is licensed under the MIT License."
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+
+        <Button
+            x:Name="LicenseBtn"
+            BackgroundColor="#ff9800"
+            FontSize="Medium"
+            Text="View"
+            FontAttributes="Bold"
+            Margin="25"
+            WidthRequest="200"
+            Clicked="OnLicenseClicked" />
+        
+        <!--#endregion /License Section-->
+
+        <!--#region Privacy Policy Section-->
+        
+        <Label
+            Text="Privacy Policy"
+            FontSize="Large"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+
+        <Label
+            Text="QDCrypt privacy policy..."
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+
+        <Button
+            x:Name="PrivacyBtn"
+            BackgroundColor="#ff9800"
+            FontSize="Medium"
+            Text="View"
+            FontAttributes="Bold"
+            Margin="25"
+            WidthRequest="200"
+            Clicked="OnPrivacyClicked" />
+
+        <!--#endregion /Privacy Policy Section-->
+
+        <!--#region Agreement Section-->
+
+        <HorizontalStackLayout>
+
+            <CheckBox 
+                x:Name="LicenseCB"
+                Color="#4caf50"
+                PropertyChanged="OnCheckBoxChanged"/>
+
+            <Label
+                Text="I have read and agree to the license."
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+
+            <CheckBox
+                x:Name="PrivacyCB"
+                Color="#4caf50"
+                PropertyChanged="OnCheckBoxChanged"/>
+
+            <Label
+                Text="I have read and agree to the privacy policy."
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+
+        </HorizontalStackLayout>
+
+        <Button
+            x:Name="AgreeBtn"
+            BackgroundColor="#4caf50"
+            FontSize="Medium"
+            Text="I Promise"
+            FontAttributes="Bold"
+            Margin="25"
+            WidthRequest="200"
+            Clicked="OnAgreeClicked" />
+
+        <!--#endregion Agreement Section-->
+        
+    </VerticalStackLayout>
+</ContentPage>
