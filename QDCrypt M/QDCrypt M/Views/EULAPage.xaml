@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QDCrypt.Views.EULAPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
     
     <VerticalStackLayout
         Margin="10, 25, 10, 10"
@@ -13,17 +14,20 @@
         <Label
             Text="License"
             FontSize="Large"
+            TextColor="Black"
             FontAttributes="Bold"
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
 
         <Label
+            TextColor="Black"
             Text="QDCrypt is licensed under the MIT License."
             FontAttributes="Bold"
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
 
         <Button
+            TextColor="White"
             x:Name="LicenseBtn"
             BackgroundColor="#ff9800"
             FontSize="Medium"
@@ -39,12 +43,14 @@
         
         <Label
             Text="Privacy Policy"
+            TextColor="Black"
             FontSize="Large"
             FontAttributes="Bold"
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
 
         <Label
+            TextColor="Black"
             Text="QDCrypt privacy policy..."
             FontAttributes="Bold"
             VerticalOptions="Center" 
@@ -52,6 +58,7 @@
 
         <Button
             x:Name="PrivacyBtn"
+            TextColor="White"
             BackgroundColor="#ff9800"
             FontSize="Medium"
             Text="View"
@@ -71,8 +78,9 @@
                 Color="#4caf50"
                 PropertyChanged="OnCheckBoxChanged"/>
 
-            <Label
+            <Label                
                 Text="I have read and agree to the license."
+                TextColor="Black"
                 FontAttributes="Bold"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
@@ -88,6 +96,7 @@
 
             <Label
                 Text="I have read and agree to the privacy policy."
+                TextColor="Black"
                 FontAttributes="Bold"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
@@ -96,6 +105,7 @@
 
         <Button
             x:Name="AgreeBtn"
+            TextColor="White"
             BackgroundColor="#4caf50"
             FontSize="Medium"
             Text="I Promise"

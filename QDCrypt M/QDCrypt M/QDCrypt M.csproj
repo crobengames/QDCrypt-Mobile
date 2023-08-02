@@ -34,33 +34,45 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
-	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
@@ -69,12 +81,16 @@
 	  <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 	  <AndroidLinkTool>r8</AndroidLinkTool>
 	  <RunAOTCompilation>False</RunAOTCompilation>
-	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationTitle>QDCrypt</ApplicationTitle>
 	  <ApplicationId>com.croben.qdcrypt</ApplicationId>
+	  <ApplicationVersion>2</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
