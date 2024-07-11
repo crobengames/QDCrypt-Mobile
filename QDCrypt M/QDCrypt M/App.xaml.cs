@@ -1,4 +1,8 @@
-﻿using QDCrypt.CustomRenderers;
+﻿#if ANDROID
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+#endif
+
+using QDCrypt.CustomRenderers;
 
 namespace QDCrypt;
 
@@ -12,8 +16,9 @@ public partial class App : Application
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping(nameof(BorderlessEntry), (handler, view) =>
         {
-#if __ANDROID__
-			handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+#if ANDROID
+            //handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            handler.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
 #endif
             /* for IOS
 			 __IOS__
@@ -25,15 +30,16 @@ public partial class App : Application
 
         Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping(nameof(BorderlessEditor), (handler, view) =>
 		{
-#if __ANDROID__
-			handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+#if ANDROID
+            //handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            handler.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
 #endif
-			/* for IOS
+            /* for IOS
 			 __IOS__
 				handler.PlatformView.BackgroundColor = UIKit.UIColor.Clear;
 				handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
 			*/
 
-		});
+        });
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui.Storage;
 using QDCrypt.Models;
 using System.Text.Json;
+using Microsoft.Maui.ApplicationModel.DataTransfer;
 
 namespace QDCrypt.Views;
 

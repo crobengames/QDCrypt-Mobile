@@ -1,4 +1,5 @@
 using QDCrypt.Models;
+using Microsoft.Maui.ApplicationModel;
 
 namespace QDCrypt.Views;
 
